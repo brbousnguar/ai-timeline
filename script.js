@@ -271,6 +271,15 @@ const timelineEvents = [
     },
     {
         date: "March 2023",
+        title: "llama.cpp Released",
+        company: "llama.cpp",
+        description: "Georgi Gerganov releases llama.cpp, an efficient C/C++ inference project that makes Meta's LLaMA-class models practical on consumer CPUs and laptops.",
+        impact: "llama.cpp became the core execution layer behind the local-LLM ecosystem, enabling quantization, offline inference, and fast community ports across macOS, Linux, and Windows.",
+        link: "https://github.com/ggml-org/llama.cpp",
+        eventType: "major"
+    },
+    {
+        date: "March 2023",
         title: "Claude Released",
         company: "Anthropic",
         description: "Anthropic releases Claude, an AI assistant focused on safety, helpfulness, and harmlessness, built with Constitutional AI.",
@@ -298,6 +307,31 @@ const timelineEvents = [
         description: "Meta releases LLaMA (Large Language Model Meta AI) as open-source, enabling researchers and developers worldwide.",
         impact: "LLaMA democratized access to large language models, enabling innovation and research beyond big tech companies.",
         link: "https://ai.meta.com/blog/large-language-model-llama-meta-ai"
+    },
+    {
+        date: "July 2023",
+        title: "Llama 2 Released",
+        company: "Meta",
+        description: "Meta and Microsoft release Llama 2 with openly available weights for research and commercial use, making strong chat and base models broadly deployable.",
+        impact: "Llama 2 turned local LLMs into a mainstream developer workflow by giving startups, hobbyists, and enterprises a credible open model family they could run and fine-tune themselves.",
+        link: "https://about.fb.com/news/2023/07/llama-2"
+    },
+    {
+        date: "August 2023",
+        title: "Ollama Launched",
+        company: "Ollama",
+        description: "Ollama emerges as a simple local LLM runtime and package manager, giving developers a fast way to pull, run, and serve models from the terminal on personal machines.",
+        impact: "Ollama lowered the operational friction of local AI, helping local models move from hacker demos to an everyday workflow for developers and enthusiasts.",
+        link: "https://ollama.com/blog/run-llama2-uncensored-locally"
+    },
+    {
+        date: "September 2023",
+        title: "Mistral 7B Released",
+        company: "Mistral AI",
+        description: "Mistral AI releases Mistral 7B under Apache 2.0, showing that a compact open model can deliver strong quality while remaining practical for local and self-hosted deployment.",
+        impact: "Mistral 7B accelerated the shift toward smaller, efficient local models that could run well on prosumer hardware without giving up too much capability.",
+        link: "https://mistral.ai/news/about-mistral-ai",
+        eventType: "major"
     },
     {
         date: "July 2023",
@@ -407,6 +441,14 @@ const timelineEvents = [
     },
     {
         date: "May 2024",
+        title: "LM Studio First Ships",
+        company: "LM Studio",
+        description: "LM Studio first ships as an offline desktop app for discovering, loading, and chatting with local LLMs on consumer hardware.",
+        impact: "LM Studio gave local models a polished desktop experience, broadening local AI beyond terminal-first tools and making private, offline workflows easier for non-experts.",
+        link: "https://lmstudio.ai/blog/lmstudio-v0.3.0"
+    },
+    {
+        date: "May 2024",
         title: "Gemini 1.5 Pro",
         company: "Google",
         description: "Google releases Gemini 1.5 Pro with a massive 1 million token context window, enabling processing of entire codebases and long documents.",
@@ -451,6 +493,15 @@ const timelineEvents = [
         description: "Adobe launches Acrobat Studio, an AI-powered workspace featuring PDF Spaces for collaboration, AI Agents for automation, and integrated Express creation tools for transforming insights into presentations.",
         impact: "Acrobat Studio represented Adobe's vision for AI-powered productivity, combining document intelligence, collaboration, and content creation into a unified platform for enterprise users.",
         link: "https://www.adobe.com/acrobat/hub.html"
+    },
+    {
+        date: "January 2025",
+        title: "DeepSeek-R1 Released",
+        company: "DeepSeek",
+        description: "DeepSeek releases DeepSeek-R1 and openly publishes distilled 1.5B to 70B variants, bringing frontier-style reasoning into the open-model ecosystem.",
+        impact: "DeepSeek-R1 reset expectations for what users could run locally or self-host, especially through smaller distilled checkpoints that were practical on prosumer hardware.",
+        link: "https://api-docs.deepseek.com/news/news250120",
+        eventType: "major"
     },
     {
         date: "January 2025",
@@ -565,6 +616,15 @@ const timelineEvents = [
         link: "https://azure.microsoft.com/en-us/blog/introducing-phi-4-microsoft-s-newest-small-language-model-specializing-in-complex-reasoning"
     },
     {
+        date: "August 2024",
+        title: "LM Studio 0.3.0 Released",
+        company: "LM Studio",
+        description: "LM Studio 0.3.0 ships built-in local RAG, a light theme, structured outputs, and the ability to serve models over the network, marking the app's maturation into a full local-AI workstation.",
+        impact: "LM Studio helped push local LLMs beyond raw inference into a desktop product for browsing models, chatting offline, exposing local APIs, and experimenting without cloud dependencies.",
+        link: "https://lmstudio.ai/blog/lmstudio-v0.3.0",
+        eventType: "minor"
+    },
+    {
         date: "June 2025",
         title: "Google AI Studio Launched",
         company: "Google",
@@ -598,14 +658,6 @@ const timelineEvents = [
     },
     {
         date: "August 2025",
-        title: "Ollama Launched",
-        company: "Ollama",
-        description: "Ollama launches an easy-to-use local LLM runtime and desktop app that makes running open models locally simple for developers and hobbyists (desktop app released July/August 2025).",
-        impact: "Ollama accelerated adoption of local AI workflows by simplifying model management, downloads, and a developer-friendly CLI and GUI for running models on personal machines.",
-        link: "https://ollama.com"
-    },
-    {
-        date: "October 2025",
         title: "Agent Builder Launched",
         company: "OpenAI",
         description: "OpenAI launches Agent Builder, a visual tool for composing, debugging, and publishing multi-step agent workflows (announced at DevDay 2025).",
@@ -822,6 +874,8 @@ const logoMap = {
     'Stability AI': './assets/logos/stabilityai.png',
     'Midjourney': './assets/logos/midjourney.png',
     'Ollama': './assets/logos/ollama.png',
+    'LM Studio': 'https://lmstudio.ai/favicon.ico',
+    'DeepSeek': 'https://chat.deepseek.com/favicon.ico',
     'Apple': 'https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png',
     'Samsung': 'https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg',
     'NVIDIA': 'https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_logo.svg'
@@ -887,6 +941,9 @@ const productLogos = {
     'OpenAI Operator Released': './assets/logos/openai.png',
     'Microsoft Copilot Vision': './assets/logos/microsoft.png',
     'Microsoft Phi-4 Released': './assets/logos/microsoft.png',
+    'LM Studio First Ships': 'https://lmstudio.ai/favicon.ico',
+    'LM Studio 0.3.0 Released': 'https://lmstudio.ai/favicon.ico',
+    'DeepSeek-R1 Released': 'https://chat.deepseek.com/favicon.ico',
     'Microsoft Copilot Pro Max': './assets/logos/microsoft.png',
     'Meta Llama 4 Released': './assets/logos/meta.png',
     'Meta AI Agents Platform': './assets/logos/meta.png',
@@ -1005,6 +1062,24 @@ function initYearFilters() {
         option.value = year;
         option.textContent = year;
         yearSelect.appendChild(option);
+    });
+}
+
+// Initialize company filters from the dataset so new timeline entries stay filterable
+function initCompanyFilters() {
+    const companySelect = document.getElementById('companyFilter');
+    if (!companySelect) return;
+
+    companySelect.innerHTML = '<option value="all">All Companies</option>';
+
+    const companies = Array.from(new Set(timelineEvents.map(event => event.company)))
+        .sort((a, b) => a.localeCompare(b));
+
+    companies.forEach(company => {
+        const option = document.createElement('option');
+        option.value = company;
+        option.textContent = company;
+        companySelect.appendChild(option);
     });
 }
 
@@ -1512,6 +1587,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     initYearFilters();
+    initCompanyFilters();
     initTimeline();
     // No in-page apps cards — this page documents the SDK and its timeline entry above.
 
