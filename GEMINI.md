@@ -37,7 +37,7 @@ For local development, we use Docker Compose to run a lightweight Nginx containe
    ```bash
    docker compose up -d
    ```
-2. Open [http://localhost:8000](http://localhost:8000)
+2. Open [http://localhost:8085](http://localhost:8085)
 3. Stop the server when finished by running:
    ```bash
    docker compose down
