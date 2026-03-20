@@ -51,6 +51,10 @@ To update the event links in `script.js` using the data defined in `add_links.py
     -   `impact`: A brief note on why the event is significant.
     -   `link`: (Optional) URL to an official announcement.
     -   `eventType`: (Optional) Set to `"major"` for highlighted events or `"planned"` for future entries.
--   **Styling:** Use CSS variables defined in `:root` for consistency across themes.
+-   **Styling & UI Aesthetics:** 
+    -   Maintain the premium, modern aesthetic established in the UI.
+    -   Use CSS variables defined in `:root` for consistency across themes (including `var(--glass-bg)` and `var(--glass-border)`).
+    -   Use the `Outfit` font for titles and headers, and `Inter` for standard body text.
+    -   Apply glassmorphism (`backdrop-filter: blur(...)`) and rich visual effects like dynamic backgrounds, hover 3D tilts, and glows for any new UI components.
 -   **Icons:** Use inline SVGs for UI elements to ensure they scale and respond to theme changes.
 -   **Logos:** Company logos are automatically matched by name. Ensure new logos are added to `assets/logos/` with names matching the `company` field (converted to lowercase).
