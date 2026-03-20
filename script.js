@@ -55,7 +55,7 @@ const timelineEvents = [
         eventType: "planned"
     },
     {
-        date: "Mid 2026 (Planned)",
+        date: "June 8, 2026 (Planned)",
         title: "Apple Intelligence 2.0",
         company: "Apple",
         description: "Apple is expected to unveil Intelligence 2.0 with on-device AI capabilities, Siri enhancements, and deep integration across iOS, iPadOS, and macOS ecosystems.",
@@ -64,7 +64,7 @@ const timelineEvents = [
         eventType: "planned"
     },
     {
-        date: "Q4 2026 (Planned)",
+        date: "November 18, 2026 (Planned)",
         title: "Microsoft Copilot 3.0",
         company: "Microsoft",
         description: "Microsoft plans to launch Copilot 3.0 with autonomous agent capabilities, advanced workflow automation, and deeper integration across Microsoft 365 and Azure services.",
@@ -91,7 +91,7 @@ const timelineEvents = [
         eventType: "planned"
     },
     {
-        date: "March 2026 (Planned)",
+        date: "May 12, 2026 (Planned)",
         title: "Google I/O 2026 AI Announcements",
         company: "Google",
         description: "Google I/O 2026 is expected to showcase major AI updates including Gemini enhancements, new AI hardware, and expanded AI integration across Android and Search.",
@@ -983,7 +983,7 @@ function extractYear(dateString) {
     return match ? match[0] : null;
 }
 
-// Parse various date string formats into a comparable numeric key (YYYYMM)
+// Parse various date string formats into a comparable numeric key (YYYYMMDD)
 function parseEventDate(dateString) {
     if (!dateString) return 0;
     // Remove parenthetical notes like (Planned)
@@ -1004,12 +1004,13 @@ function parseEventDate(dateString) {
         december: 12, dec: 12
     };
 
-    // Month + Year (e.g., "March 2026")
-    const monthYear = s.match(/(January|Jan|February|Feb|March|Mar|April|Apr|May|June|Jun|July|Jul|August|Aug|September|Sept|Sep|October|Oct|November|Nov|December|Dec)\s+(\d{4})/i);
+    // Month + Day? + Year (e.g., "March 2026", "May 12, 2026")
+    const monthYear = s.match(/(January|Jan|February|Feb|March|Mar|April|Apr|May|June|Jun|July|Jul|August|Aug|September|Sept|Sep|October|Oct|November|Nov|December|Dec)\s+(?:(\d{1,2})(?:st|nd|rd|th)?,?\s+)?(\d{4})/i);
     if (monthYear) {
         const month = monthMap[monthYear[1].toLowerCase()];
-        const year = parseInt(monthYear[2], 10);
-        return year * 100 + (month || 12);
+        const day = monthYear[2] ? parseInt(monthYear[2], 10) : 0;
+        const year = parseInt(monthYear[3], 10);
+        return year * 10000 + (month || 12) * 100 + day;
     }
 
     // Quarter (e.g., Q2 2027)
@@ -1018,7 +1019,7 @@ function parseEventDate(dateString) {
         const q = parseInt(quarter[1], 10);
         const year = parseInt(quarter[2], 10);
         const month = q * 3; // end of quarter
-        return year * 100 + month;
+        return year * 10000 + month * 100 + 0;
     }
 
     // Early/Mid/Late YEAR or phrases like "Mid 2027"
@@ -1029,14 +1030,14 @@ function parseEventDate(dateString) {
         let month = 6; // default to mid-year
         if (p === 'early') month = 3;
         if (p === 'late') month = 9;
-        return year * 100 + month;
+        return year * 10000 + month * 100 + 0;
     }
 
     // Fallback: just extract year and use month=12
     const yearOnly = s.match(/(\d{4})/);
     if (yearOnly) {
         const year = parseInt(yearOnly[1], 10);
-        return year * 100 + 12;
+        return year * 10000 + 1200;
     }
 
     return 0;
