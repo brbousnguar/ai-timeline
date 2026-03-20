@@ -860,6 +860,38 @@ const timelineEvents = [
         impact: "The v6 alpha allowed artists and power users to test bleeding-edge features and provide feedback ahead of the general release.",
         link: "https://www.midjourney.com/news/v6-alpha",
         eventType: "minor"
+    },
+    {
+        date: "March 2023",
+        title: "AutoGPT Released",
+        company: "Significant Gravitas",
+        description: "Toran Bruce Richards releases AutoGPT, an experimental open-source application showcasing the capabilities of the GPT-4 language model acting autonomously.",
+        impact: "Triggered the first massive wave of hype around autonomous AI agents capable of spawning sub-tasks and browsing the web."
+    },
+    {
+        date: "March 2024",
+        title: "Devin Announced",
+        company: "Cognition",
+        description: "Cognition announces Devin, described as the first autonomous AI software engineer, capable of planning, coding, and debugging entire projects.",
+        impact: "Sparked intense industry debate over the future of software engineering and popularized the fully autonomous coding agent paradigm.",
+        link: "https://www.cognition.ai/blog",
+        eventType: "major"
+    },
+    {
+        date: "April 2024",
+        title: "OpenHands Launched",
+        company: "OpenHands",
+        description: "OpenHands (formerly OpenDevin) is launched as an open-source alternative to Devin, aiming to democratize autonomous AI software engineering.",
+        impact: "Rapidly accumulated thousands of GitHub stars, proving massive community demand for open-source agentic coding tools."
+    },
+    {
+        date: "November 2025",
+        title: "OpenClaw Launched",
+        company: "Moltbot",
+        description: "Peter Steinberger launches OpenClaw (initially Clawdbot/Moltbot), a free and open-source self-hosted autonomous AI assistant that runs locally and integrates with models like Claude and DeepSeek.",
+        impact: "Popularized the concept of locally hosted, persistently running background AI agents that communicate through standard messaging apps like WhatsApp and Telegram.",
+        link: "https://open-claw.org",
+        eventType: "major"
     }
 ].reverse(); // Reverse timeline to show most recent events first
 
