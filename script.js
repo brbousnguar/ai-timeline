@@ -892,6 +892,38 @@ const timelineEvents = [
         impact: "Popularized the concept of locally hosted, persistently running background AI agents that communicate through standard messaging apps like WhatsApp and Telegram.",
         link: "https://open-claw.org",
         eventType: "major"
+    },
+    {
+        date: "May 2020",
+        title: "NVIDIA Ampere Architecture (A100)",
+        company: "NVIDIA",
+        description: "NVIDIA introduces the Ampere architecture and the A100 GPU, offering a substantial leap in performance for AI training and inference workloads.",
+        impact: "The A100 became the foundational workhorse for the generative AI boom, powering the training of early massive models like GPT-3.",
+        eventType: "major"
+    },
+    {
+        date: "March 2022",
+        title: "NVIDIA GTC 2022: Hopper Architecture",
+        company: "NVIDIA",
+        description: "NVIDIA announces the Hopper architecture and the H100 Tensor Core GPU, featuring a new dedicated Transformer Engine to accelerate large language models.",
+        impact: "The H100 became the most sought-after chip on the planet, dramatically accelerating LLM training and making trillion-parameter models feasible.",
+        eventType: "major"
+    },
+    {
+        date: "March 2024",
+        title: "NVIDIA GTC 2024: Blackwell Architecture",
+        company: "NVIDIA",
+        description: "NVIDIA unveils the Blackwell architecture (including the B200 and GB200 Superchip), delivering up to a 30x performance increase for LLM inference over Hopper.",
+        impact: "Marked a massive generational leap in computing power and efficiency, cementing NVIDIA's absolute dominance in AI data center infrastructure.",
+        eventType: "major"
+    },
+    {
+        date: "March 2025",
+        title: "NVIDIA GTC 2025: Blackwell Ultra & Rubin",
+        company: "NVIDIA",
+        description: "NVIDIA announces the Blackwell Ultra AI Factory Platform and previews the next-generation Vera Rubin architecture, optimizing efficiency for autonomous agentic AI.",
+        impact: "Highlighted NVIDIA's accelerated yearly cadence of major AI architecture updates, pushing the boundaries of physical robotics and reasoning AI.",
+        eventType: "major"
     }
 ].reverse(); // Reverse timeline to show most recent events first
 
