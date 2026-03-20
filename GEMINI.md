@@ -30,7 +30,18 @@ A comprehensive, interactive web application showcasing the milestones of Artifi
 ## Getting Started
 
 ### Running the Application
-Since this is a static site, you can run it by opening `index.html` in any modern web browser. No build step or local server is strictly required, though using a simple server like `live-server` or VS Code's "Live Server" extension is recommended for development.
+Since this is a static site, you can view it by simply opening `index.html` in any modern web browser. 
+
+For local development, we use Docker Compose to run a lightweight Nginx container:
+1. Start the server using the IDE workflow by typing `/serve-locally`, or manually run:
+   ```bash
+   docker compose up -d
+   ```
+2. Open [http://localhost:8000](http://localhost:8000)
+3. Stop the server when finished by running:
+   ```bash
+   docker compose down
+   ```
 
 ### Updating Event Links
 To update the event links in `script.js` using the data defined in `add_links.py`:
