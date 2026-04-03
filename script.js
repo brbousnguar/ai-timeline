@@ -185,7 +185,8 @@ const timelineEvents = [
         company: "Stability AI",
         description: "Stability AI releases Stable Diffusion as open-source, making high-quality image generation accessible to everyone.",
         impact: "Stable Diffusion democratized AI image generation, enabling millions of developers and creators to build with the technology.",
-        link: "https://stability.ai/stable-diffusion"
+        link: "https://stability.ai/stable-diffusion",
+        tags: ["local-model", "open-weights"]
     },
     {
         date: "August 2022",
@@ -276,7 +277,8 @@ const timelineEvents = [
         description: "Georgi Gerganov releases llama.cpp, an efficient C/C++ inference project that makes Meta's LLaMA-class models practical on consumer CPUs and laptops.",
         impact: "llama.cpp became the core execution layer behind the local-LLM ecosystem, enabling quantization, offline inference, and fast community ports across macOS, Linux, and Windows.",
         link: "https://github.com/ggml-org/llama.cpp",
-        eventType: "major"
+        eventType: "major",
+        tags: ["local-model", "open-source-runtime"]
     },
     {
         date: "March 2023",
@@ -306,7 +308,8 @@ const timelineEvents = [
         company: "Meta",
         description: "Meta releases LLaMA (Large Language Model Meta AI) as open-source, enabling researchers and developers worldwide.",
         impact: "LLaMA democratized access to large language models, enabling innovation and research beyond big tech companies.",
-        link: "https://ai.meta.com/blog/large-language-model-llama-meta-ai"
+        link: "https://ai.meta.com/blog/large-language-model-llama-meta-ai",
+        tags: ["local-model", "open-weights"]
     },
     {
         date: "July 2023",
@@ -314,7 +317,8 @@ const timelineEvents = [
         company: "Meta",
         description: "Meta and Microsoft release Llama 2 with openly available weights for research and commercial use, making strong chat and base models broadly deployable.",
         impact: "Llama 2 turned local LLMs into a mainstream developer workflow by giving startups, hobbyists, and enterprises a credible open model family they could run and fine-tune themselves.",
-        link: "https://about.fb.com/news/2023/07/llama-2"
+        link: "https://about.fb.com/news/2023/07/llama-2",
+        tags: ["local-model", "open-weights"]
     },
     {
         date: "August 2023",
@@ -322,7 +326,8 @@ const timelineEvents = [
         company: "Ollama",
         description: "Ollama emerges as a simple local LLM runtime and package manager, giving developers a fast way to pull, run, and serve models from the terminal on personal machines.",
         impact: "Ollama lowered the operational friction of local AI, helping local models move from hacker demos to an everyday workflow for developers and enthusiasts.",
-        link: "https://ollama.com/blog/run-llama2-uncensored-locally"
+        link: "https://ollama.com/blog/run-llama2-uncensored-locally",
+        tags: ["local-model", "runtime", "developer-tool"]
     },
     {
         date: "September 2023",
@@ -331,7 +336,8 @@ const timelineEvents = [
         description: "Mistral AI releases Mistral 7B under Apache 2.0, showing that a compact open model can deliver strong quality while remaining practical for local and self-hosted deployment.",
         impact: "Mistral 7B accelerated the shift toward smaller, efficient local models that could run well on prosumer hardware without giving up too much capability.",
         link: "https://mistral.ai/news/about-mistral-ai",
-        eventType: "major"
+        eventType: "major",
+        tags: ["local-model", "open-weights"]
     },
     {
         date: "July 2023",
@@ -437,7 +443,8 @@ const timelineEvents = [
         title: "Stable Diffusion 3 Medium Released",
         company: "Stability AI",
         description: "Stability AI releases Stable Diffusion 3 Medium, a 2 billion parameter model offering high-quality image generation with improved efficiency for consumer hardware.",
-        impact: "SD3 Medium made the latest Stable Diffusion technology accessible to users with mid-range hardware, balancing quality and accessibility."
+        impact: "SD3 Medium made the latest Stable Diffusion technology accessible to users with mid-range hardware, balancing quality and accessibility.",
+        tags: ["local-model", "open-weights"]
     },
     {
         date: "May 2024",
@@ -445,7 +452,8 @@ const timelineEvents = [
         company: "LM Studio",
         description: "LM Studio first ships as an offline desktop app for discovering, loading, and chatting with local LLMs on consumer hardware.",
         impact: "LM Studio gave local models a polished desktop experience, broadening local AI beyond terminal-first tools and making private, offline workflows easier for non-experts.",
-        link: "https://lmstudio.ai/blog/lmstudio-v0.3.0"
+        link: "https://lmstudio.ai/blog/lmstudio-v0.3.0",
+        tags: ["local-model", "runtime", "desktop-app"]
     },
     {
         date: "May 2024",
@@ -484,7 +492,8 @@ const timelineEvents = [
         title: "Stable Diffusion 3.5 Released",
         company: "Stability AI",
         description: "Stability AI releases Stable Diffusion 3.5 with three variants (Large, Large Turbo, and Medium), offering improved image quality, faster generation, and better prompt understanding.",
-        impact: "SD 3.5 refined the SD3 architecture with significant quality improvements and introduced turbo models for real-time generation, strengthening Stability AI's competitive position."
+        impact: "SD 3.5 refined the SD3 architecture with significant quality improvements and introduced turbo models for real-time generation, strengthening Stability AI's competitive position.",
+        tags: ["local-model", "open-weights"]
     },
     {
         date: "August 2025",
@@ -501,7 +510,8 @@ const timelineEvents = [
         description: "DeepSeek releases DeepSeek-R1 and openly publishes distilled 1.5B to 70B variants, bringing frontier-style reasoning into the open-model ecosystem.",
         impact: "DeepSeek-R1 reset expectations for what users could run locally or self-host, especially through smaller distilled checkpoints that were practical on prosumer hardware.",
         link: "https://api-docs.deepseek.com/news/news250120",
-        eventType: "major"
+        eventType: "major",
+        tags: ["local-model", "open-weights"]
     },
     {
         date: "January 2025",
@@ -640,7 +650,8 @@ const timelineEvents = [
         description: "LM Studio 0.3.0 ships built-in local RAG, a light theme, structured outputs, and the ability to serve models over the network, marking the app's maturation into a full local-AI workstation.",
         impact: "LM Studio helped push local LLMs beyond raw inference into a desktop product for browsing models, chatting offline, exposing local APIs, and experimenting without cloud dependencies.",
         link: "https://lmstudio.ai/blog/lmstudio-v0.3.0",
-        eventType: "minor"
+        eventType: "minor",
+        tags: ["local-model", "runtime", "desktop-app"]
     },
     {
         date: "June 2025",
@@ -697,7 +708,8 @@ const timelineEvents = [
         company: "OpenAI",
         description: "OpenAI releases gpt-oss, including safeguard model variants (e.g., gpt-oss-safeguard-120b and gpt-oss-safeguard-20b), as part of its October 2025 updates.",
         impact: "gpt-oss provided open-source model variants and safety-focused releases that expanded research access and encouraged community-led experimentation while emphasizing safeguards.",
-        link: "https://openai.com/"
+        link: "https://openai.com/",
+        tags: ["local-model", "open-weights"]
     },
     {
         date: "September 2025",
@@ -745,7 +757,8 @@ const timelineEvents = [
         company: "Stability AI",
         description: "Stability AI releases Stable Diffusion 3.0 with major improvements in image quality, prompt adherence, and text rendering within images.",
         impact: "Stable Diffusion 3.0 brought the open-source image generation model closer to proprietary competitors in quality and capabilities.",
-        link: "https://stability.ai/news/stable-diffusion-3"
+        link: "https://stability.ai/news/stable-diffusion-3",
+        tags: ["local-model", "open-weights"]
     },
     {
         date: "December 2025",
@@ -793,7 +806,8 @@ const timelineEvents = [
         company: "Meta",
         description: "Meta releases Llama 4, an open-source model family with 405B parameters, multimodal capabilities, and state-of-the-art performance rivaling proprietary models.",
         impact: "Llama 4 democratized access to frontier AI capabilities, enabling developers worldwide to build advanced AI applications without vendor lock-in.",
-        link: "https://ai.meta.com/blog"
+        link: "https://ai.meta.com/blog",
+        tags: ["local-model", "open-weights"]
     },
     {
         date: "February 2026",
