@@ -608,6 +608,14 @@ const timelineEvents = [
         link: "https://openai.com/index/learning-to-reason-with-llms"
     },
     {
+        date: "April 2025",
+        title: "Codex CLI Released",
+        company: "OpenAI",
+        description: "OpenAI launches Codex CLI, a lightweight open-source coding agent that runs in the terminal and connects frontier reasoning models to local code and command-line workflows.",
+        impact: "Codex CLI brought OpenAI's coding agents directly onto developers' machines, accelerating the shift toward terminal-native, agentic software engineering workflows.",
+        link: "https://openai.com/index/introducing-o3-and-o4-mini/"
+    },
+    {
         date: "May 2025",
         title: "Claude 4 Released",
         company: "Anthropic",
@@ -639,6 +647,14 @@ const timelineEvents = [
         description: "Google launches AI Studio, a comprehensive platform for building, testing, and deploying AI applications with Gemini models and custom tools.",
         impact: "AI Studio democratized AI application development, making it easier for developers to create sophisticated AI-powered products.",
         link: "https://ai.google.dev/aistudio"
+    },
+    {
+        date: "June 2025",
+        title: "Gemini CLI Released",
+        company: "Google",
+        description: "Google announces Gemini CLI, an open-source AI agent that brings Gemini directly into developers' terminals for coding, problem-solving, research, and automation.",
+        impact: "Gemini CLI extended Google's AI tooling into the command line, giving developers a terminal-native agent with large context, tool integrations, and open-source extensibility.",
+        link: "https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/"
     },
     {
         date: "July 2025",
@@ -964,6 +980,7 @@ const productLogos = {
     'GPT-5 Released': './assets/logos/openai.png',
     'GPT-5.1 Released': './assets/logos/openai.png',
     'GPT-5.2 Released': './assets/logos/openai.png',
+    'Codex CLI Released': './assets/logos/openai.png',
     'ChatGPT Launched': './assets/logos/openai.png',
     'ChatGPT Gets Vision': './assets/logos/openai.png',
     'ChatGPT Deep Research Launched': './assets/logos/openai.png',
@@ -987,6 +1004,7 @@ const productLogos = {
     'Gemini Multi-App Capability': './assets/logos/google.png',
     'Gemini 2.0 Available to Everyone': './assets/logos/google.png',
     'Gemini 2.5 Pro Released': './assets/logos/google.png',
+    'Gemini CLI Released': './assets/logos/google.png',
     'Gemini 3 Released': './assets/logos/google.png',
     'Gemini Personal Intelligence': './assets/logos/google.png',
     'Bard Announced': './assets/logos/google.png',
