@@ -537,10 +537,18 @@ const timelineEvents = [
     },
     {
         date: "February 2025",
-        title: "Claude 3.7 Sonnet & Claude Code",
+        title: "Claude 3.7 Sonnet Released",
         company: "Anthropic",
-        description: "Anthropic releases Claude 3.7 Sonnet, its first hybrid reasoning model with controllable extended thinking, and Claude Code for terminal-based coding tasks.",
+        description: "Anthropic releases Claude 3.7 Sonnet, its first hybrid reasoning model with controllable extended thinking.",
         impact: "Claude 3.7 Sonnet introduced hybrid reasoning capabilities, allowing users to choose between instant responses or detailed step-by-step reasoning.",
+        link: "https://www.anthropic.com/news/claude-3-5-sonnet"
+    },
+    {
+        date: "February 2025",
+        title: "Claude Code Released",
+        company: "Anthropic",
+        description: "Anthropic releases Claude Code, a terminal-based coding assistant for searching codebases, editing files, running commands, and handling developer workflows from the command line.",
+        impact: "Claude Code marked Anthropic's push into agentic developer tooling, bringing Claude directly into terminal-centric software engineering workflows.",
         link: "https://www.anthropic.com/news/claude-3-5-sonnet"
     },
     {
@@ -967,7 +975,8 @@ const productLogos = {
     'Claude Released': './assets/logos/anthropic.png',
     'Claude 2 Released': './assets/logos/anthropic.png',
     'Claude 3 Released': './assets/logos/anthropic.png',
-    'Claude 3.7 Sonnet & Claude Code': './assets/logos/anthropic.png',
+    'Claude 3.7 Sonnet Released': './assets/logos/anthropic.png',
+    'Claude Code Released': './assets/logos/anthropic.png',
     'Claude Gets Web Search': './assets/logos/anthropic.png',
     'Claude 4 Released': './assets/logos/anthropic.png',
     'Claude Opus 4.5 Released': './assets/logos/anthropic.png',
