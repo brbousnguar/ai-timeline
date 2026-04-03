@@ -549,7 +549,8 @@ const timelineEvents = [
         company: "Anthropic",
         description: "Anthropic releases Claude Code, a terminal-based coding assistant for searching codebases, editing files, running commands, and handling developer workflows from the command line.",
         impact: "Claude Code marked Anthropic's push into agentic developer tooling, bringing Claude directly into terminal-centric software engineering workflows.",
-        link: "https://www.anthropic.com/news/claude-3-5-sonnet"
+        link: "https://www.anthropic.com/news/claude-3-5-sonnet",
+        tags: ["agentic-coder", "cli", "developer-tool"]
     },
     {
         date: "February 2025",
@@ -613,7 +614,8 @@ const timelineEvents = [
         company: "OpenAI",
         description: "OpenAI launches Codex CLI, a lightweight open-source coding agent that runs in the terminal and connects frontier reasoning models to local code and command-line workflows.",
         impact: "Codex CLI brought OpenAI's coding agents directly onto developers' machines, accelerating the shift toward terminal-native, agentic software engineering workflows.",
-        link: "https://openai.com/index/introducing-o3-and-o4-mini/"
+        link: "https://openai.com/index/introducing-o3-and-o4-mini/",
+        tags: ["agentic-coder", "cli", "developer-tool"]
     },
     {
         date: "May 2025",
@@ -654,7 +656,8 @@ const timelineEvents = [
         company: "Google",
         description: "Google announces Gemini CLI, an open-source AI agent that brings Gemini directly into developers' terminals for coding, problem-solving, research, and automation.",
         impact: "Gemini CLI extended Google's AI tooling into the command line, giving developers a terminal-native agent with large context, tool integrations, and open-source extensibility.",
-        link: "https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/"
+        link: "https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/",
+        tags: ["agentic-coder", "cli", "developer-tool"]
     },
     {
         date: "July 2025",
@@ -1175,6 +1178,38 @@ function initCompanyFilters() {
     });
 }
 
+function formatTagLabel(tag) {
+    return tag
+        .split('-')
+        .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+        .join(' ');
+}
+
+function initTagFilters() {
+    const tagSelect = document.getElementById('tagFilter');
+    if (!tagSelect) return;
+
+    tagSelect.innerHTML = '<option value="all">All Tags</option>';
+
+    const tags = Array.from(new Set(
+        timelineEvents.flatMap(event => Array.isArray(event.tags) ? event.tags : [])
+    )).sort((a, b) => a.localeCompare(b));
+
+    tags.forEach(tag => {
+        const option = document.createElement('option');
+        option.value = tag;
+        option.textContent = formatTagLabel(tag);
+        tagSelect.appendChild(option);
+    });
+}
+
+function renderTagChips(tags = []) {
+    if (!Array.isArray(tags) || tags.length === 0) return '';
+
+    const chips = tags.map(tag => `<span class="event-tag">${formatTagLabel(tag)}</span>`).join('');
+    return `<div class="event-tags">${chips}</div>`;
+}
+
 // Initialize the timeline
 function initTimeline() {
     const timelineContainer = document.getElementById('timelineEvents');
@@ -1255,8 +1290,14 @@ function createPlannedEventCard(event, index) {
     card.dataset.title = event.title;
     card.dataset.description = event.description;
     card.dataset.date = event.date;
+    card.dataset.tags = (event.tags || []).join('|');
     const plannedYear = extractYear(event.date);
     if (plannedYear) card.dataset.year = plannedYear;
+
+    const tagsMarkup = renderTagChips(event.tags);
+    if (tagsMarkup) {
+        card.insertAdjacentHTML('beforeend', tagsMarkup);
+    }
 
     // Click to open modal
     card.addEventListener('click', () => openModal(event));
@@ -1278,6 +1319,7 @@ function createEventElement(event, index) {
     eventDiv.dataset.title = event.title;
     eventDiv.dataset.description = event.description;
     eventDiv.dataset.date = event.date;
+    eventDiv.dataset.tags = (event.tags || []).join('|');
     const year = extractYear(event.date);
     if (year) {
         eventDiv.dataset.year = year;
@@ -1306,6 +1348,7 @@ function createEventElement(event, index) {
             </div>
         </div>
         <div class="event-company">${event.company}</div>
+        ${renderTagChips(event.tags)}
         <div class="event-description">${event.description}</div>
     `;
 
@@ -1362,6 +1405,7 @@ function updatePlannedSectionVisibility(visiblePlanned) {
 let currentFilters = {
     company: 'all',
     year: 'all',
+    tag: 'all',
     search: ''
 };
 
@@ -1381,20 +1425,23 @@ function applyFilters() {
         const eventTitle = event.dataset.title?.toLowerCase() || '';
         const eventDescription = event.dataset.description?.toLowerCase() || '';
         const eventDate = event.dataset.date?.toLowerCase() || '';
+        const eventTags = event.dataset.tags?.toLowerCase() || '';
         const isMinorEvent = event.classList.contains('minor-event');
 
         const companyMatch = currentFilters.company === 'all' || eventCompany === currentFilters.company;
         const yearMatch = currentFilters.year === 'all' || eventYear === currentFilters.year;
+        const tagMatch = currentFilters.tag === 'all' || eventTags.split('|').includes(currentFilters.tag);
         const minorEventMatch = showMinorEvents || !isMinorEvent;
 
-        // Search matches title, description, company, or date
+        // Search matches title, description, company, date, or tags
         const searchMatch = searchTerm.length === 0 ||
             eventTitle.includes(searchTerm) ||
             eventDescription.includes(searchTerm) ||
             eventCompany.toLowerCase().includes(searchTerm) ||
-            eventDate.includes(searchTerm);
+            eventDate.includes(searchTerm) ||
+            eventTags.includes(searchTerm);
 
-        if (companyMatch && yearMatch && searchMatch && minorEventMatch) {
+        if (companyMatch && yearMatch && tagMatch && searchMatch && minorEventMatch) {
             event.classList.remove('hidden');
             visibleCount++;
         } else {
@@ -1411,17 +1458,20 @@ function applyFilters() {
         const eventTitle = card.dataset.title?.toLowerCase() || '';
         const eventDescription = card.dataset.description?.toLowerCase() || '';
         const eventDate = card.dataset.date?.toLowerCase() || '';
+        const eventTags = card.dataset.tags?.toLowerCase() || '';
 
         const companyMatch = currentFilters.company === 'all' || eventCompany === currentFilters.company;
         const yearMatch = currentFilters.year === 'all' || eventYear === currentFilters.year;
+        const tagMatch = currentFilters.tag === 'all' || eventTags.split('|').includes(currentFilters.tag);
 
         const searchMatch = searchTerm.length === 0 ||
             eventTitle.includes(searchTerm) ||
             eventDescription.includes(searchTerm) ||
             (eventCompany && eventCompany.toLowerCase().includes(searchTerm)) ||
-            eventDate.includes(searchTerm);
+            eventDate.includes(searchTerm) ||
+            eventTags.includes(searchTerm);
 
-        if (companyMatch && yearMatch && searchMatch) {
+        if (companyMatch && yearMatch && tagMatch && searchMatch) {
             card.classList.remove('hidden');
             visiblePlanned++;
         } else {
@@ -1456,6 +1506,7 @@ function applyFilters() {
         const hasActiveFilters =
             currentFilters.company !== 'all' ||
             currentFilters.year !== 'all' ||
+            currentFilters.tag !== 'all' ||
             searchTerm.length > 0 ||
             !showMinorEvents;
         timelineList.classList.toggle('filtered-view', hasActiveFilters);
@@ -1507,6 +1558,14 @@ function updateActiveFilters() {
         });
     }
 
+    if (currentFilters.tag !== 'all') {
+        badges.push({
+            type: 'tag',
+            label: formatTagLabel(currentFilters.tag),
+            value: currentFilters.tag
+        });
+    }
+
     if (currentFilters.search.trim().length > 0) {
         badges.push({
             type: 'search',
@@ -1519,7 +1578,7 @@ function updateActiveFilters() {
         const badgeEl = document.createElement('div');
         badgeEl.className = 'active-filter-badge';
         badgeEl.innerHTML = `
-            <span class="badge-label">${badge.type === 'company' ? 'Company' : badge.type === 'year' ? 'Year' : 'Search'}: ${badge.label}</span>
+            <span class="badge-label">${badge.type === 'company' ? 'Company' : badge.type === 'year' ? 'Year' : badge.type === 'tag' ? 'Tag' : 'Search'}: ${badge.label}</span>
             <button class="badge-remove" data-type="${badge.type}" data-value="${badge.value}">
                 <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
                     <path d="M12 4L4 12M4 4L12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -1539,6 +1598,9 @@ function updateActiveFilters() {
             } else if (type === 'year') {
                 document.getElementById('yearFilter').value = 'all';
                 currentFilters.year = 'all';
+            } else if (type === 'tag') {
+                document.getElementById('tagFilter').value = 'all';
+                currentFilters.tag = 'all';
             } else if (type === 'search') {
                 document.getElementById('searchFilter').value = '';
                 currentFilters.search = '';
@@ -1553,10 +1615,12 @@ function updateActiveFilters() {
 function clearFilters() {
     currentFilters.company = 'all';
     currentFilters.year = 'all';
+    currentFilters.tag = 'all';
     currentFilters.search = '';
 
     document.getElementById('companyFilter').value = 'all';
     document.getElementById('yearFilter').value = 'all';
+    document.getElementById('tagFilter').value = 'all';
     document.getElementById('searchFilter').value = '';
     document.getElementById('clearSearch').style.display = 'none';
 
@@ -1589,6 +1653,7 @@ function openModal(event) {
                 <h2>${event.title}</h2>
                 <div class="event-date">${event.date}</div>
                 <div class="event-company">${event.company}</div>
+                ${renderTagChips(event.tags)}
             </div>
         </div>
         <div class="event-description">${event.description}</div>
@@ -1680,6 +1745,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initYearFilters();
     initCompanyFilters();
+    initTagFilters();
     initTimeline();
     // No in-page apps cards — this page documents the SDK and its timeline entry above.
 
@@ -1691,6 +1757,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Year filter select
     document.getElementById('yearFilter').addEventListener('change', (e) => {
         setFilter('year', e.target.value);
+    });
+
+    document.getElementById('tagFilter').addEventListener('change', (e) => {
+        setFilter('tag', e.target.value);
     });
 
     // Clear filters button
