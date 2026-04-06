@@ -32,6 +32,7 @@ event_links = {
     "Agent Builder Launched": "https://openai.com/devday",
     "gpt-oss Released": "https://openai.com/",
     "Claude Sonnet 4.5 Released": "https://www.anthropic.com/news/claude-sonnet-4-5",
+    "Claude Agent SDK Released": "https://www.anthropic.com/news/claude-sonnet-4-5",
     "GPT-5.1 Released": "https://openai.com/",
     "Gemini 3 Released": "https://blog.google/technology/ai/google-gemini-ai",
     "Claude Opus 4.5 Released": "https://www.anthropic.com/news/claude-opus-4-5",

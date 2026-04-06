@@ -720,6 +720,14 @@ const timelineEvents = [
         link: "https://www.anthropic.com/news/claude-sonnet-4-5"
     },
     {
+        date: "September 2025",
+        title: "Claude Agent SDK Released",
+        company: "Anthropic",
+        description: "Anthropic releases the Claude Agent SDK, making the infrastructure behind Claude Code available for developers to build their own long-running, permission-aware AI agents.",
+        impact: "The Agent SDK expanded Anthropic's agent platform beyond Claude Code itself, giving developers a production-ready foundation for building more capable autonomous workflows.",
+        link: "https://www.anthropic.com/news/claude-sonnet-4-5"
+    },
+    {
         date: "November 2025",
         title: "GPT-5.1 Released",
         company: "OpenAI",
