@@ -973,6 +973,52 @@ const timelineEvents = [
         description: "NVIDIA announces the Blackwell Ultra AI Factory Platform and previews the next-generation Vera Rubin architecture, optimizing efficiency for autonomous agentic AI.",
         impact: "Highlighted NVIDIA's accelerated yearly cadence of major AI architecture updates, pushing the boundaries of physical robotics and reasoning AI.",
         eventType: "major"
+    },
+    {
+        date: "March 5, 2026",
+        title: "GPT-5.4 Released with Native Computer Use",
+        company: "OpenAI",
+        description: "OpenAI releases GPT-5.4, the first general-purpose model with native, state-of-the-art computer-use capabilities, enabling AI agents to operate computers and carry out complex workflows across applications. It achieved record scores on OSWorld-Verified, WebArena Verified, and scored 83% on OpenAI's GDPval knowledge work benchmark.",
+        impact: "GPT-5.4 marked a major step toward fully autonomous AI agents capable of completing real-world computer tasks without human intervention.",
+        link: "https://openai.com/",
+        eventType: "major"
+    },
+    {
+        date: "April 2, 2026",
+        title: "Google Gemma 4 Released",
+        company: "Google",
+        description: "Google releases Gemma 4, a 31B open-weight model under the Apache 2.0 license with zero commercial restrictions. The model ranked #3 globally on Arena AI among all open models.",
+        impact: "Gemma 4 continued Google's commitment to open-source AI, delivering a top-tier open model that enterprises could deploy freely without licensing barriers.",
+        link: "https://blog.google/technology/ai",
+        eventType: "major",
+        tags: ["local-model", "open-weights"]
+    },
+    {
+        date: "April 7, 2026",
+        title: "Claude Mythos: Restricted Access Under Project Glasswing",
+        company: "Anthropic",
+        description: "Anthropic confirms the existence of Claude Mythos, the most capable model it has ever built, but announces it will not be publicly released. Access is restricted to 50 organizations under Project Glasswing, tasked with using Mythos defensively to scan their own infrastructure for vulnerabilities.",
+        impact: "A landmark moment in AI safety: the first time a major lab publicly withheld a frontier model from general release due to safety concerns, signaling a new era of responsible deployment decisions.",
+        link: "https://www.anthropic.com/",
+        eventType: "major"
+    },
+    {
+        date: "April 8, 2026",
+        title: "Meta Muse Spark Released",
+        company: "Meta",
+        description: "Meta debuts Muse Spark (code-named Avocado), the first model from Meta's new Muse series developed by Meta Superintelligence Labs under Alexandr Wang. This marks Meta's first proprietary (non-open-weight) AI model.",
+        impact: "Meta's pivot to a proprietary model strategy represented a major strategic shift, signaling that even the strongest open-source AI champion now sees value in closed frontier models.",
+        link: "https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html",
+        eventType: "major"
+    },
+    {
+        date: "April 2026",
+        title: "Zhipu AI GLM-5.1 Released",
+        company: "Zhipu AI",
+        description: "Zhipu AI releases GLM-5.1 under the MIT license — a 744-billion-parameter mixture-of-experts model with 40B active parameters per forward pass and a 200K context window. On SWE-Bench Pro, it reportedly outperformed both Claude Opus 4.6 and GPT-5.4.",
+        impact: "GLM-5.1 demonstrated that open-source models from China could surpass Western frontier models on expert software engineering benchmarks, intensifying global AI competition.",
+        link: "https://llm-stats.com/ai-news",
+        tags: ["local-model", "open-weights"]
     }
 ].reverse(); // Reverse timeline to show most recent events first
 
