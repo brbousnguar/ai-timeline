@@ -809,12 +809,13 @@ const timelineEvents = [
         link: "https://www.microsoft.com/en-us/microsoft-copilot"
     },
     {
-        date: "February 2026",
-        title: "Meta Llama 4 Released",
+        date: "April 2025",
+        title: "Meta Llama 4 Scout & Maverick Released",
         company: "Meta",
-        description: "Meta releases Llama 4, an open-source model family with 405B parameters, multimodal capabilities, and state-of-the-art performance rivaling proprietary models.",
-        impact: "Llama 4 democratized access to frontier AI capabilities, enabling developers worldwide to build advanced AI applications without vendor lock-in.",
-        link: "https://ai.meta.com/blog",
+        description: "Meta releases Llama 4 Scout and Maverick, the first Llama models with native multimodal (text + image) support using a Mixture-of-Experts architecture. Scout features a 10M-token context window (the largest among open models), while Maverick (17B active / 400B total params) rivals GPT-4o and Gemini 2.0 on coding and multilingual benchmarks.",
+        impact: "Llama 4 brought frontier-class multimodal and long-context capabilities to the open-weight ecosystem, deployed to billions of users across WhatsApp, Messenger, and Instagram.",
+        link: "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+        eventType: "major",
         tags: ["local-model", "open-weights"]
     },
     {
@@ -834,11 +835,11 @@ const timelineEvents = [
         link: "https://blog.google/technology/ai/notebooklm-audio-overviews"
     },
     {
-        date: "February 2026",
-        title: "OpenAI Operator Released",
+        date: "January 2025",
+        title: "OpenAI Operator Launched",
         company: "OpenAI",
-        description: "OpenAI launches Operator, an AI agent that can browse the web and perform tasks autonomously on behalf of users, including booking, shopping, and research.",
-        impact: "Operator marked OpenAI's entry into autonomous AI agents, enabling AI to take actions in the real world rather than just generating responses.",
+        description: "OpenAI launches Operator as a research preview for Pro subscribers, an AI agent powered by the Computer-Using Agent (CUA) model that autonomously controls a browser to complete real-world tasks such as filling forms, booking travel, and shopping.",
+        impact: "Operator marked OpenAI's entry into autonomous web-browsing AI agents, enabling AI to take actions in the real world rather than just generating responses.",
         link: "https://openai.com/index/introducing-operator"
     },
     {
@@ -1019,6 +1020,42 @@ const timelineEvents = [
         impact: "GLM-5.1 demonstrated that open-source models from China could surpass Western frontier models on expert software engineering benchmarks, intensifying global AI competition.",
         link: "https://llm-stats.com/ai-news",
         tags: ["local-model", "open-weights"]
+    },
+    {
+        date: "October 2024",
+        title: "Apple Intelligence Launched",
+        company: "Apple",
+        description: "Apple releases iOS 18.1, iPadOS 18.1, and macOS Sequoia 15.1 with the debut of Apple Intelligence — a personal AI system featuring systemwide writing tools, notification and email summaries, a smarter Siri, and a Photos Clean Up tool. All processing runs on-device or via Private Cloud Compute for larger requests.",
+        impact: "Apple Intelligence brought private, on-device AI to hundreds of millions of iPhones, iPads, and Macs, setting a new bar for privacy-preserving personal AI at consumer scale.",
+        link: "https://www.apple.com/newsroom/2024/10/apple-intelligence-is-available-today-on-iphone-ipad-and-mac/",
+        eventType: "major"
+    },
+    {
+        date: "February 2025",
+        title: "xAI Grok 3 Released",
+        company: "xAI",
+        description: "Elon Musk's xAI releases Grok 3, trained on the 200,000-GPU Colossus supercomputer with 10–15× more compute than prior versions. The model introduces 'Deep Search' for in-depth research and 'Big Brain' extended-thinking mode, outperforming GPT-4o and Gemini 1.5 Pro on several reasoning benchmarks.",
+        impact: "Grok 3 established xAI as a credible frontier lab, demonstrating that massive compute investment could rapidly close the gap with OpenAI and Google on reasoning and knowledge tasks.",
+        link: "https://x.ai/news/grok-3",
+        eventType: "major"
+    },
+    {
+        date: "April 2025",
+        title: "OpenAI o3 Released",
+        company: "OpenAI",
+        description: "OpenAI releases o3 alongside o4-mini on April 16, 2025. o3 is OpenAI's most powerful reasoning model at the time, able to 'think with images' — actively analyzing diagrams, sketches, and charts as part of its chain-of-thought. It achieves new SOTA scores on Codeforces, SWE-bench, and MMMU, and makes 20% fewer major errors than o1 on hard real-world problems.",
+        impact: "o3 pushed the boundary of reasoning AI and introduced visual chain-of-thought, making complex multimodal problem-solving practical for developers via the API and GitHub Copilot.",
+        link: "https://openai.com/index/introducing-o3-and-o4-mini/",
+        eventType: "major"
+    },
+    {
+        date: "May 2025",
+        title: "Google I/O 2025: Veo 3, Project Astra & Agent Mode",
+        company: "Google",
+        description: "At Google I/O 2025, Google unveils Veo 3 (high-quality AI video generation with synchronized audio and dialogue), Project Astra (a universal real-time AI assistant operating through camera and audio on phones and smart glasses), and Gemini Agent Mode (an autonomous task-execution layer for booking, research, and scheduling). Imagen 4 and the Android XR glasses with live AR experiences are also announced.",
+        impact: "Google I/O 2025 marked Google's most AI-dense keynote ever, cementing Gemini as the backbone of Search, Workspace, Android, and a new wave of autonomous agent experiences for everyday users.",
+        link: "https://blog.google/innovation-and-ai/products/google-io-2025-all-our-announcements/",
+        eventType: "major"
     }
 ].reverse(); // Reverse timeline to show most recent events first
 
@@ -1037,7 +1074,8 @@ const logoMap = {
     'DeepSeek': 'https://chat.deepseek.com/favicon.ico',
     'Apple': 'https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png',
     'Samsung': 'https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg',
-    'NVIDIA': 'https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_logo.svg'
+    'NVIDIA': 'https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_logo.svg',
+    'xAI': 'https://x.ai/favicon.ico'
 };
 
 // Product-specific logos (for tools that might need custom logos)
@@ -1059,6 +1097,7 @@ const productLogos = {
     'DALL-E 2 Released': './assets/logos/openai.png',
     'Sora Announced': './assets/logos/openai.png',
     'o1 Models Announced': './assets/logos/openai.png',
+    'o3 Released': './assets/logos/openai.png',
     'o4-mini Released': './assets/logos/openai.png',
     'Claude Released': './assets/logos/anthropic.png',
     'Claude 2 Released': './assets/logos/anthropic.png',
@@ -1100,18 +1139,22 @@ const productLogos = {
     'Adobe Firefly 3.0 Released': './assets/logos/adobe.png',
     'Adobe Acrobat Studio Released': './assets/logos/adobe.png',
     'GPT-5 Pro Released': './assets/logos/openai.png',
-    'OpenAI Operator Released': './assets/logos/openai.png',
+    'OpenAI Operator Launched': './assets/logos/openai.png',
     'Microsoft Copilot Vision': './assets/logos/microsoft.png',
     'Microsoft Phi-4 Released': './assets/logos/microsoft.png',
     'LM Studio First Ships': 'https://lmstudio.ai/favicon.ico',
     'LM Studio 0.3.0 Released': 'https://lmstudio.ai/favicon.ico',
     'DeepSeek-R1 Released': 'https://chat.deepseek.com/favicon.ico',
     'Microsoft Copilot Pro Max': './assets/logos/microsoft.png',
-    'Meta Llama 4 Released': './assets/logos/meta.png',
+    'Meta Llama 4 Scout & Maverick Released': './assets/logos/meta.png',
     'Meta AI Agents Platform': './assets/logos/meta.png',
     'Anthropic Claude Artifacts': './assets/logos/anthropic.png',
     'Google NotebookLM Audio Overview': './assets/logos/google.png',
     'Google AI Studio Launched': './assets/logos/google.png',
+    'Google I/O 2025: Veo 3, Project Astra & Agent Mode': './assets/logos/google.png',
+    'Apple Intelligence Launched': 'https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png',
+    'xAI Grok 3 Released': 'https://x.ai/favicon.ico',
+    'OpenAI o3 Released': './assets/logos/openai.png',
     'Stability AI 3.0 Released': './assets/logos/stabilityai.png'
 };
 
