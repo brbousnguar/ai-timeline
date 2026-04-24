@@ -1056,6 +1056,89 @@ const timelineEvents = [
         impact: "Google I/O 2025 marked Google's most AI-dense keynote ever, cementing Gemini as the backbone of Search, Workspace, Android, and a new wave of autonomous agent experiences for everyday users.",
         link: "https://blog.google/innovation-and-ai/products/google-io-2025-all-our-announcements/",
         eventType: "major"
+    },
+    {
+        date: "November 2024",
+        title: "Model Context Protocol (MCP) Released",
+        company: "Anthropic",
+        description: "Anthropic releases MCP (Model Context Protocol) as an open standard for connecting AI assistants to external data sources, tools, and business systems via a universal client-server interface. OpenAI, Google DeepMind, and major developer tools rapidly adopt it, making MCP the de facto 'USB standard' for AI-tool integration.",
+        impact: "MCP eliminated the need for custom one-off integrations between AI systems and external tools, creating a universal agentic connector layer that became the backbone of enterprise AI agent deployments.",
+        link: "https://www.anthropic.com/news/model-context-protocol",
+        eventType: "major"
+    },
+    {
+        date: "December 2024",
+        title: "OpenAI o1 Full Model & ChatGPT Pro Launched",
+        company: "OpenAI",
+        description: "OpenAI releases the full o1 reasoning model with multimodal (text + image) support, alongside a new $200/month ChatGPT Pro subscription tier that provides access to 'o1 Pro' — a higher-compute variant that makes 30%+ fewer errors on hard problems. The launch is part of OpenAI's '12 Days of Shipmas' event.",
+        impact: "The full o1 launch marked a major leap in AI reasoning reliability, while ChatGPT Pro set a new premium tier for power users and enterprises requiring the highest accuracy on complex scientific, math, and coding problems.",
+        link: "https://openai.com/index/o1-and-new-tools-for-developers/",
+        eventType: "major"
+    },
+    {
+        date: "December 2024",
+        title: "OpenAI Sora Publicly Launched",
+        company: "OpenAI",
+        description: "OpenAI publicly launches Sora Turbo, its text-to-video model, for ChatGPT Plus and Pro subscribers. Users can generate HD videos up to 20 seconds long in various aspect ratios, with features like a storyboard tool and asset remixing. C2PA watermarking is embedded in all outputs.",
+        impact: "Sora's public release opened a new frontier in AI video generation, enabling creators to produce high-quality video from text prompts and positioning AI as a serious tool for creative filmmaking.",
+        link: "https://openai.com/index/sora-is-here/",
+        eventType: "major"
+    },
+    {
+        date: "December 2024",
+        title: "DeepSeek V3 Released",
+        company: "DeepSeek",
+        description: "DeepSeek releases DeepSeek-V3, a 671B-parameter Mixture-of-Experts open-source model (37B active per token) trained on 14.8 trillion tokens at a cost of ~$5.6M in compute — an order of magnitude cheaper than competitors. It rivals Claude 3.5 Sonnet and GPT-4o on major benchmarks and delivers 60 tokens/second throughput.",
+        impact: "DeepSeek V3 shocked the AI industry by demonstrating that frontier-class performance could be achieved at a fraction of the cost, triggering a global re-evaluation of AI compute economics and cementing China's open-source labs as serious competitors.",
+        link: "https://api-docs.deepseek.com/news/news1226",
+        eventType: "major",
+        tags: ["local-model", "open-weights"]
+    },
+    {
+        date: "April 2025",
+        title: "Gemini 2.5 Flash Released",
+        company: "Google",
+        description: "Google announces Gemini 2.5 Flash in preview, the first fully hybrid reasoning model in the Gemini family. Developers can tune the model's 'thinking budget' (0 to 24,576 tokens) to precisely control quality, latency, and cost per request. It supports a 1M-token context window and text, image, video, and audio inputs.",
+        impact: "Gemini 2.5 Flash made controllable reasoning affordable at scale, giving developers the first production-ready tool to dial reasoning depth dynamically — ideal for high-volume, cost-sensitive agent workloads.",
+        link: "https://developers.googleblog.com/en/start-building-with-gemini-25-flash/",
+        eventType: "major"
+    },
+    {
+        date: "July 2025",
+        title: "xAI Grok 4 Released",
+        company: "xAI",
+        description: "xAI releases Grok 4 and 'Grok 4 Heavy' on July 9, 2025, trained on 200,000 GPUs with 6× improved training efficiency over Grok 3. Grok 4 introduces a multi-agent reasoning architecture, native tool use (Python, web/X search, code editors), and claims PhD-level performance across all subjects. Benchmarks include 44.4% on Humanity's Last Exam and 75% on SWE-Bench.",
+        impact: "Grok 4 positioned xAI as a genuine top-tier frontier lab, matching or exceeding GPT-5 and Gemini 3 on key reasoning benchmarks and introducing a $300/month SuperGrok Heavy tier for the most demanding agentic workloads.",
+        link: "https://x.ai/news/grok-4",
+        eventType: "major"
+    },
+    {
+        date: "February 2026",
+        title: "Claude Sonnet 4.6 with Agent Teams Released",
+        company: "Anthropic",
+        description: "Anthropic releases Claude Sonnet 4.6 as the new default model across all tiers. It introduces 'Agent Teams' — coordinating 2–16 Claude instances in parallel for complex multi-step workflows — and reaches near-Opus performance (79.6% SWE-bench, 72.5% OSWorld) at Sonnet pricing. A 1M-token context window is available in beta.",
+        impact: "Claude Sonnet 4.6 brought flagship-grade agentic orchestration to mid-tier pricing, democratizing enterprise-grade agent workflows and making multi-Claude task parallelism practical for production deployments.",
+        link: "https://www.anthropic.com/news/claude-sonnet-4-6",
+        eventType: "major"
+    },
+    {
+        date: "February 2026",
+        title: "Gemini 3.1 Pro Released",
+        company: "Google",
+        description: "Google releases Gemini 3.1 Pro on February 19, 2026, delivering more than double the reasoning performance of Gemini 3 Pro with a 77.1% score on ARC-AGI-2. The model supports 1M-token context, a 65K-token output limit, three compute tiers (Low/Medium/High), and advanced agentic capabilities including code-based animation and complex system synthesis.",
+        impact: "Gemini 3.1 Pro dominated 12 of 18 leading benchmarks and set a new standard for agentic reasoning in production, surpassing GPT-5 on several software engineering metrics and becoming the default model in Google Antigravity IDE.",
+        link: "https://cloud.google.com/blog/products/ai-machine-learning/gemini-3-1-pro-on-gemini-cli-gemini-enterprise-and-vertex-ai",
+        eventType: "major"
+    },
+    {
+        date: "February 2026",
+        title: "DeepSeek V3.2 Released",
+        company: "DeepSeek",
+        description: "DeepSeek releases V3.2, a 685B-parameter open-source MoE model (37B active per token) under the MIT license. It unifies fast conversational response and deep multi-step reasoning via intelligent routing, supports a 262K-token context window, and introduces DeepSeek Sparse Attention (DSA) for efficiency. The 'Speciale' variant achieved gold-medal results at the 2025 IMO and IOI.",
+        impact: "DeepSeek V3.2 continued China's open-source AI surge by reaching near-GPT-5 performance under MIT licensing, giving enterprises and researchers a cost-efficient, agent-ready frontier model with no proprietary restrictions.",
+        link: "https://huggingface.co/deepseek-ai/DeepSeek-V3.2",
+        eventType: "major",
+        tags: ["local-model", "open-weights"]
     }
 ].reverse(); // Reverse timeline to show most recent events first
 
@@ -1155,6 +1238,15 @@ const productLogos = {
     'Apple Intelligence Launched': 'https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png',
     'xAI Grok 3 Released': 'https://x.ai/favicon.ico',
     'OpenAI o3 Released': './assets/logos/openai.png',
+    'OpenAI o1 Full Model & ChatGPT Pro Launched': './assets/logos/openai.png',
+    'OpenAI Sora Publicly Launched': './assets/logos/openai.png',
+    'Model Context Protocol (MCP) Released': './assets/logos/anthropic.png',
+    'Claude Sonnet 4.6 with Agent Teams Released': './assets/logos/anthropic.png',
+    'Gemini 2.5 Flash Released': './assets/logos/google.png',
+    'Gemini 3.1 Pro Released': './assets/logos/google.png',
+    'xAI Grok 4 Released': 'https://x.ai/favicon.ico',
+    'DeepSeek V3 Released': 'https://chat.deepseek.com/favicon.ico',
+    'DeepSeek V3.2 Released': 'https://chat.deepseek.com/favicon.ico',
     'Stability AI 3.0 Released': './assets/logos/stabilityai.png'
 };
 
