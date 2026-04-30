@@ -636,6 +636,24 @@ const timelineEvents = [
         link: "https://www.anthropic.com/news/claude-4"
     },
     {
+        date: "May 2025",
+        title: "Windows AI Foundry Announced",
+        company: "Microsoft",
+        description: "At Microsoft Build 2025, Microsoft unveils Windows AI Foundry — a unified platform for the full AI developer lifecycle on Windows, covering model selection, optimization, fine-tuning, and deployment on both local devices and the cloud. It succeeds the Windows Copilot Runtime and offers hardware-agnostic support across NPU, GPU, and CPU on AMD, Intel, NVIDIA, and Qualcomm silicon.",
+        impact: "Windows AI Foundry positioned Windows as a first-class platform for building and running local AI applications, enabling developers to ship AI-powered experiences without cloud dependency.",
+        link: "https://blogs.windows.com/windowsdeveloper/2025/05/19/advancing-windows-for-ai-development-new-platform-capabilities-and-tools-introduced-at-build-2025/",
+        eventType: "major"
+    },
+    {
+        date: "May 2025",
+        title: "Microsoft Foundry Local Launched",
+        company: "Microsoft",
+        description: "Also at Microsoft Build 2025, Microsoft launches Foundry Local — a runtime that lets developers deploy and run small and large language models directly on PCs and edge devices with no cloud connectivity required. It ships with an OpenAI-compatible REST API, multi-language SDKs (Python, Node.js), a CLI, and integrates with Ollama and NVIDIA NIMs model catalogs.",
+        impact: "Foundry Local made on-device LLM inference a first-party Windows workflow, bringing ultra-low latency, full offline support, and data-privacy guarantees to enterprise and consumer AI applications.",
+        link: "https://devblogs.microsoft.com/foundry/foundry-local-a-new-era-of-edge-ai/",
+        eventType: "major"
+    },
+    {
         date: "June 2025",
         title: "Microsoft Phi-4 Released",
         company: "Microsoft",
@@ -1107,6 +1125,8 @@ const productLogos = {
     'LM Studio 0.3.0 Released': 'https://lmstudio.ai/favicon.ico',
     'DeepSeek-R1 Released': 'https://chat.deepseek.com/favicon.ico',
     'Microsoft Copilot Pro Max': './assets/logos/microsoft.png',
+    'Windows AI Foundry Announced': './assets/logos/microsoft.png',
+    'Microsoft Foundry Local Launched': './assets/logos/microsoft.png',
     'Meta Llama 4 Released': './assets/logos/meta.png',
     'Meta AI Agents Platform': './assets/logos/meta.png',
     'Anthropic Claude Artifacts': './assets/logos/anthropic.png',
